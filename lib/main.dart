@@ -7,7 +7,6 @@ void main() async{
   singleton.DataSingleton instance = singleton.DataSingleton.getInstance();
   await instance.loadByRegion();
   List<List> data = instance.byRegion;
-  print(data);
   runApp(App());
 }
 

@@ -26,12 +26,18 @@ class BubblesState extends State<Bubbles> {
     List<List> data = singleton.DataSingleton.getInstance().byRegion;
     disabilityData = [];
     List<charts.Color> colors = [
-      charts.MaterialPalette.deepOrange.shadeDefault,
-      charts.MaterialPalette.lime.shadeDefault,
-      charts.MaterialPalette.red.shadeDefault,
-      charts.MaterialPalette.teal.shadeDefault,
-      charts.MaterialPalette.gray.shadeDefault,
-      charts.MaterialPalette.indigo.shadeDefault,
+       new charts.Color(
+      r: 31, g:119, b:180, a:255),
+     new charts.Color(
+      r: 148, g:103, b:189, a:255),
+      new charts.Color(
+      r: 140, g:86, b:75, a:255),
+      new charts.Color(
+      r: 44, g:160, b:44, a:255),
+      new charts.Color(
+      r: 255, g:127, b:14, a:255),
+      new charts.Color(
+      r: 214, g:39, b:40, a:255),
     ];
     for (var i = 0; i < data.length; i++) {
       var entry = data[i];
@@ -120,7 +126,6 @@ class BubblesState extends State<Bubbles> {
   void _infoSelectionModelUpdated(charts.SelectionModel<num> model) {
     if(model.hasDatumSelection){
       indexSelection = model.selectedSeries[0].seriesIndex;
-      print(indexSelection);
       setState((){});
     }
   }

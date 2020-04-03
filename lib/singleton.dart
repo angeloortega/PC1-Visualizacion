@@ -7,8 +7,6 @@ class DataSingleton {
 
   void loadByRegion() async {
     segunRegion = await csv.readCsv("assets/1_personas_con_discapacidad_segun_region.csv");
-    print("Loaded from Singleton");
-    print(segunRegion);
   }
 
   static DataSingleton _instance;
