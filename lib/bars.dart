@@ -42,8 +42,6 @@ class BarsState extends State<Bars>{
     ];
     for (var i = 0; i < data.length; i++) {
       var entry = data[i];
-      print(data[i]);
-      print(entry[1]);
       data_list.add(new DisabilityAge(entry[0], entry[1], colors[i]));
     }
 
