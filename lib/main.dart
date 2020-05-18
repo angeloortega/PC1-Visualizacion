@@ -6,6 +6,8 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   singleton.DataSingleton instance = singleton.DataSingleton.getInstance();
   await instance.loadByRegion();
+  await instance.loadByType();
+  await instance.loadByAge();
   List<List> data = instance.byRegion;
   runApp(App());
 }

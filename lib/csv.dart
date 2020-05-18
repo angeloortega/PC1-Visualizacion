@@ -1,4 +1,5 @@
 import "package:csv/csv.dart" as csv;
+import 'package:csv/csv.dart';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 
@@ -8,6 +9,6 @@ Future<List<List>> readCsv(String csvPath) async{
 }
 
 List<List> csvToList(String csvFile){
-  csv.CsvToListConverter converter = new csv.CsvToListConverter(eol: "\r\n", fieldDelimiter: ",", shouldParseNumbers: true);
+  csv.CsvToListConverter converter = new csv.CsvToListConverter(fieldDelimiter: ",", shouldParseNumbers: true);
   return converter.convert(csvFile);
 }
