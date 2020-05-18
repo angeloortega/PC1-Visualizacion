@@ -41,7 +41,7 @@ class BubblesState extends State<Bubbles> {
     ];
     for (var i = 0; i < data.length; i++) {
       var entry = data[i];
-      print(data[i]);
+
       disabilityData.add(new DisabilityEntry(
           entry[0], [new DisabilityRegion(entry[0], entry[1], colors[i])]));
     }
